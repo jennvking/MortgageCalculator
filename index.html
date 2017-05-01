@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html ng-app="app" lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mortgage Calculator</title>
+
+  <link rel="stylesheet" href="styles.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+
+</head>
+
+<body ng-controller="MortgageController as vm">
+  <h1>Mortgage <br>
+    Calculator</h1>
+  <form>
+    <!--
+    ng-submit="vm.valform()" this would go in the form tag
+    -->
+    <div class="everything">
+      <div class="loanInfo">
+        <!--Loan Balance Input-->
+        <h2>Mortgage Loan Balance</h2>
+        <input id="allInputs" type="number" ng-model="vm.bal" required/>
+
+        <!--Loan APR Input-->
+        <h2>APR (%)</h2>
+        <input id="allInputs" type="number" step=".01" ng-model="vm.apr" required/>
+
+        <!--Loan Years-->
+        <h2>Loan Term (Years)</h2>
+        <input id="allInputs" type="number" ng-model="vm.term">
+
+        <!--Dropdown Period Selection-->
+        <h2>Available Periods</h2>
+        <select id="allInputs" class="periods" ng-model="vm.loanperiods" required>
+        <option value="12">Monthly</option>
+        <option value="6">Bimonthly</option>
+      </select>
+      </div>
+  </form>
+  <!--Button Calculate Mortgage-->
+  <div class="calMortButton">
+    <button id="calculateButton" class="allDiv" ng-click="vm.calculateMortgage()">Calculate Payments</button>
+  </div>
+
+  <!--Output-->
+  <div>
+    <h3 class="output">{{vm.outputText}}</h3>
+  </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+
+</html>

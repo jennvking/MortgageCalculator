@@ -1,0 +1,69 @@
+body {
+  background-image: url('https://static.pexels.com/photos/348688/pexels-photo-348688.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 100px;
+}
+
+h1 {
+  font-family: Palatino;
+  font-size: 100px;
+  font-style: normal;
+  font-variant: small-caps;
+  font-weight: 400;
+  line-height: 80px;
+  color: #D3AC6C;
+  margin-top: 20px;
+}
+
+h3 {
+  font-family: Quicksand;
+	font-size: 25px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 10px;
+  margin-bottom: 50px;
+  color: white;
+}
+
+h2 {
+  margin-top: 20px;
+  color: #88CEB6;
+  font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+  font-size: 25px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 500;
+  line-height: 15.4px;
+}
+
+#allInputs {
+  background-color: white;
+  border-radius: 5px;
+  height: 30px;
+  padding-left: 10px;
+  font-size: 20px;
+}
+
+#calculateButton {
+  margin-top: 30px;
+  display: block;
+  background-color: #D3AC6C;
+  border-radius: 5px;
+  padding: 5px 7px;
+  color: white;
+  font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+  font-size: 20px;
+  text-align: center;
+}
+
+.output {
+  font-family: Palatino;
+  color: white;
+  font-size: 50px;
+  font-style: normal;
+  font-variant: small-caps;
+  font-weight: 400;
+  line-height: 20px;
+}
