@@ -40,3 +40,9 @@
     }
   }
 })();
+
+/* I will be coming back to edit the behavior of this application so that
+  if a field is not entered, no text will appear at the bottom of the webpage,
+  and an alert will appear to enter appropriate information into all
+  fields.
+  */
