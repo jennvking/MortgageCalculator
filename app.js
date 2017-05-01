@@ -16,18 +16,14 @@
 
   /* @ngInject */
   function MortgageController() {
+    //define variables according to inputs
     var vm = this;
     vm.bal;
     vm.apr;
     vm.term;
 
+    //create function to calculate mortgage
     vm.calculateMortgage = function() {
-      /*
-      My poor attempt at finding a function for an on form submission filter for a missing input.
-
-      if (WHAT GOES HERE) {
-        vm.outputText = ("Please enter your information into every field.")
-      } else {*/
         // monthly interest rate
         let monthlyInterestRate = (vm.apr / 100) / vm.loanperiods;
         // number of payments
@@ -38,6 +34,7 @@
         let interestQuotient = (monthlyInterestRate * compoundedInterestRate) / (compoundedInterestRate - 1);
         // final calculation
         let monthlyPayment = Math.round(vm.bal * interestQuotient).toFixed(0);
+        //pull monthly payment variable and assign to text output variable, then bind to output p in html
         vm.outputText = ("Your monthly payments will be $" + monthlyPayment)
       // }
     }
