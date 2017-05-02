@@ -32,11 +32,11 @@
 
         <!--Loan Years-->
         <h2>Loan Term (Years)</h2>
-        <input id="allInputs" type="number" ng-model="vm.term">
+        <input id="allInputs" type="number" ng-model="vm.term" required>
 
         <!--Dropdown Period Selection-->
         <h2>Available Periods</h2>
-        <select id="allInputs" class="periods" ng-model="vm.loanperiods" required>
+        <select id="allInputs" class="periods" ng-model="vm.loanperiods">
         <option value="12">Monthly</option>
         <option value="6">Bimonthly</option>
       </select>
