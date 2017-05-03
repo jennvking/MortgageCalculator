@@ -16,7 +16,7 @@
 <body ng-controller="MortgageController as vm">
   <h1>Mortgage <br>
     Calculator</h1>
-  <form>
+  <form name="mortgageCalcForm">
     <!--
     ng-submit="vm.valform()" this would go in the form tag
     -->
@@ -36,7 +36,7 @@
 
         <!--Dropdown Period Selection-->
         <h2>Available Periods</h2>
-        <select id="allInputs" class="periods" ng-model="vm.loanperiods">
+        <select id="allInputs" class="periods" ng-model="vm.loanperiods" required>
         <option value="12">Monthly</option>
         <option value="6">Bimonthly</option>
       </select>
@@ -44,7 +44,7 @@
   </form>
   <!--Button Calculate Mortgage-->
   <div class="calMortButton">
-    <button id="calculateButton" class="allDiv" ng-click="vm.calculateMortgage()">Calculate Payments</button>
+    <button id="calculateButton" class="allDiv" ng-click="vm.calculateMortgage()" ng-disabled="mortgageCalcForm.$invalid">Calculate Payments</button>
   </div>
 
   <!--Output-->
